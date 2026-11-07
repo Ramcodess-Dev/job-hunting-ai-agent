@@ -1,31 +1,33 @@
 # CareerPilot AI
 
-CareerPilot AI is Ramcodess Dev's job-search command center: track applications, organize next steps, and shortlist roles that fit your goals.
-
-## Live demo
-
-https://ramcodess-dev.github.io/job-hunting-ai-agent/
+Ramcodess Dev's job-search workspace. This is an independent browser app with live remote-role discovery, a persistent application tracker, and editable career writing tools.
 
 ## Run locally
 
-Open `public/index.html` in your browser, or serve the static site:
+Open `public/index.html` in a browser, or start a static server:
 
 ```bash
 npx serve public
 ```
 
-## Project features
+No build step, account, or API key is needed. Search listings require an internet connection. The tracker and drafts stay in browser storage on the device being used.
 
-- Application pipeline with interview, review, applied, and saved states.
-- Role recommendations with match scores and shortlist controls.
-- Follow-up prompts and an AI copilot concept area.
+## Working features
+
+- Search current remote job listings by keyword and location.
+- Save real listings to an application tracker, update status, remove entries, or export CSV.
+- Add applications manually.
+- Generate editable cover-note, follow-up, and interview-practice drafts from supplied role context.
+- Compare resume and job-description keywords locally in the browser.
 - Responsive layout for desktop and mobile.
 
-The current dashboard uses illustrative demo data. Live listings, AI-generated content, and account storage are not connected yet.
+## Job data and privacy
+
+Remote listings come from [Remotive's public API](https://remotive.com/remote-jobs/api), are cached in the browser for six hours, can be delayed by up to 24 hours, and link back to Remotive. Drafts, pasted resumes, and application records stay in local browser storage and are not sent to a server. Drafts use editable templates; an external AI model is not currently connected.
 
 ## Deployment
 
-GitHub Pages deploys the `public/` directory on every push to `main` via `.github/workflows/pages.yml`.
+The repository is not currently deployed. Once the app is ready, GitHub Pages can publish the `public/` directory. Add a workflow under `.github/workflows/` or choose Pages deployment from repository settings.
 
 ## License
 
